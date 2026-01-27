@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "discord-waverider": {
+      "command": "python",
+      "args": ["/home/dev/Repo/discord-community-bot/mcp_server.py"],
+      "env": {
+        "DISCORD_TOKEN": "${DISCORD_TOKEN}"
+      }
+    }
+  }
+}
