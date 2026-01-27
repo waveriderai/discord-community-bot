@@ -4,6 +4,9 @@ discord.py>=2.3.0
 # Claude AI
 anthropic>=0.40.0
 
+# MCP Server
+mcp[cli]>=1.0.0
+
 # Database (Phase 2)
 # mysql-connector-python>=8.0.0
 # sqlalchemy>=2.0.0

@@ -102,6 +102,52 @@ discord-community-bot/
 2. 建立 API Key
 3. 填入 `.env` 的 `ANTHROPIC_API_KEY`
 
+## MCP Server（Claude CLI 整合）
+
+MCP Server 讓 Claude CLI 可以直接操作 Discord。
+
+### 啟動 MCP Server
+
+```bash
+# 確保已設定環境變數
+export DISCORD_TOKEN=your_token_here
+
+# 啟動 MCP Server
+python mcp_server.py
+```
+
+### Claude Code 設定
+
+將以下設定加入 `~/.claude/settings.json`：
+
+```json
+{
+  "mcpServers": {
+    "discord-waverider": {
+      "command": "python",
+      "args": ["/path/to/discord-community-bot/mcp_server.py"],
+      "env": {
+        "DISCORD_TOKEN": "your_discord_token"
+      }
+    }
+  }
+}
+```
+
+### 可用的 MCP Tools
+
+| 工具 | 說明 |
+|------|------|
+| `list_guilds` | 列出 Bot 所在的伺服器 |
+| `list_channels` | 列出伺服器頻道 |
+| `get_channel_messages` | 讀取頻道訊息歷史 |
+| `send_message` | 發送訊息 |
+| `send_embed` | 發送 Embed 格式訊息 |
+| `create_channel` | 建立新頻道 |
+| `delete_channel` | 刪除頻道 |
+| `list_members` | 列出伺服器成員 |
+| `get_guild_info` | 取得伺服器詳細資訊 |
+
 ## License
 
 Private - WaveRider Team
