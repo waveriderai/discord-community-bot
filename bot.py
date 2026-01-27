@@ -65,7 +65,7 @@ SYSTEM_PROMPT = """你是 WaveRider 社群的 AI 助理，專門協助用戶解�
 """
 
 
-async def ask_claude(question: str, context: str = "") -> str:
+def ask_claude(question: str, context: str = "") -> str:
     """Send a question to Claude and get a response."""
     if not claude_client:
         return "Claude API 尚未設定，請聯繫管理員。"
