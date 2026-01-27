@@ -1,0 +1,18 @@
+# Docker Compose for WaveRider Discord Bot
+# Portainer Git Deploy Ready
+
+services:
+  bot:
+    build: .
+    container_name: waverider-discord-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Taipei
+    # Health check (optional)
+    # healthcheck:
+    #   test: ["CMD", "python", "-c", "print('ok')"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
