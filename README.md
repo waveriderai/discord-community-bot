@@ -43,3 +43,5 @@ pytest tests/
 
 ---
 *WaveRider.AI - 讓交易更智能*
+
+<\!-- Updated: Mon Feb  2 07:01:44 PM UTC 2026 -->
