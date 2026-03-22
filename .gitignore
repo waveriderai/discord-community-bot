@@ -36,5 +36,8 @@ Thumbs.db
 .coverage
 htmlcov/
 
+# Content state tracking
+.content_state.json
+
 # Claude workspace
 .claude/
